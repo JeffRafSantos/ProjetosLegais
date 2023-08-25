@@ -1,1 +1,47 @@
+#Pedra, papel e tesoura
+from random import randint
+Player = int(input("Escolha (1-pedra, 2-papel, 3-tesoura): "))
+comp = randint(1, 3)
+print(f"Computador apostou {comp}")
+print(f"Player apostou {Player}")
+if comp == Player: # pega todos os empates
+    print("Empate")
+elif (comp==1 and Player==3) or (comp==2 and Player==1) or (comp==3 and Player==2):
+    print("Computador ganhou!")
+else:
+    print("Player ganhou!")
 
+
+
+
+
+
+#Versão longa
+from random import randint
+Player = int(input("Escolha (1-pedra, 2-papel, 3-tesoura): "))
+comp = randint(1, 3)
+print(f"Computador apostou {comp}")
+print(f"Player apostou {Player}")
+if comp == 1: #comp-pedra
+    if Player == 3: #tesoura
+        print("Computador ganhou!")
+    elif Player == 2: #papel
+        print("Player ganhou!")
+    else: # sobrou apenas pedra
+        print("Empate")
+
+elif comp == 2: #comp-papel
+    if Player == 3: #tesoura
+        print("Player ganhou!")
+    elif Player == 1: #pedra
+        print("Computador ganhou!")
+    else: # sobrou apenas papel
+        print("Empate")
+
+else: #sobrou apenas tesoura
+    if Player == 1:  #pedra
+        print("Player ganhou!")
+    elif Player == 2:  #papel
+        print("Computador ganhou!")
+    else:  # sobrou apenas tesoura
+        print("Empate")
