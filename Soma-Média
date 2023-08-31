@@ -1,0 +1,32 @@
+#FEITO COM FOR
+s = 0
+q = int(input("Quantos números você quer somar? "))
+if q != 0:
+    for i in range(1, q+1, 1):
+        num = int(input(f"Insira um número: "))
+        if num != 0:
+           s = s + num
+        else:
+           print("Ops, o número não pode ser 0!")
+    media = s / q
+    print(f"A soma é: {s}")
+    print(f"A média é: {media:.2f}")
+else:
+    print("Ops, o número não pode ser 0!")
+
+--------------------------------------------------------------------------------------------------------------------------
+
+#FEITO COM WHILE
+i = 1
+s = 0
+q = int(input("Quantos números você quer somar? "))
+while i <= q:
+    num = int(input(f"Insira um número: "))
+    if num != 0:
+        s = s + num
+        i = i + 1
+    else:
+        print("Ops, o número não pode ser 0!")
+media = s / 10
+print(f"A soma é: {s}")
+print(f"A média é: {media}")
